@@ -1,8 +1,10 @@
+#ifndef USER_H
+#define USER_H
+
+
 #include <iostream>
 #include <string>
 
-#ifndef USER_H
-#define USER_H
 
 class User{
     std::string status;
@@ -15,6 +17,7 @@ class User{
         std::string get_status();
         void set_status(std::string status);
         static int get_user_count();
+        virtual void output(); // virtual means the subclasses can override it
 
         User();
         User(std::string first_name, std::string last_name);

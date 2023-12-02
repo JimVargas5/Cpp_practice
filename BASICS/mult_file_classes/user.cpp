@@ -17,9 +17,13 @@
         int User::get_user_count(){
             return user_count;
         }
-
+        
+        void User::output(){
+            std::cout << "This is a User\n";
+        }
 
         User::User(){ // default constructor
+            std::cout << "User created" << std::endl;
             user_count++;
         }
         User::User(std::string first_name, std::string last_name){ // have both constructors
